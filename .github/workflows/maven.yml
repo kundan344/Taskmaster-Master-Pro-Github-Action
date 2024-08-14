@@ -33,7 +33,7 @@ jobs:
 
     - name: Sonaqube Code Analysis
       uses: sonarsource/sonarqube-scan-action@master
-      with:
+      env:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
 
