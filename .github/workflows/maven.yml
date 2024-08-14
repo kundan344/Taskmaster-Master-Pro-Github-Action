@@ -32,7 +32,7 @@ jobs:
       run: trivy fs --format table -o trivy-scan-fs.html .
 
     - name: Sonaqube Code Analysis
-      uses: achilleslinux/sonarqube-action@master
+      uses: sonarsource/sonarqube-scan-action@master
       with:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
