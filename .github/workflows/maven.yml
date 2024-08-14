@@ -21,9 +21,14 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+   
     - name: Build with Maven
       run: mvn -B package
+    
     - name: Code Test
       run: mvn test
+
+    - name: Trivy FS Scan
+      run: trivy fs --format table -o trivy-scan-fs.html .
 
  
