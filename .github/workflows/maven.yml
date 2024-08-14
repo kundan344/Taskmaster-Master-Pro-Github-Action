@@ -4,14 +4,14 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "Dev" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "Dev" ]
 
 jobs:
   build:
 
-    runs-on: 
+    runs-on: self-hosted
 
     steps:
     - uses: actions/checkout@v4
