@@ -55,7 +55,8 @@ jobs:
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Docker Image Push 
-      run: docker push kundankumar344/devdtaskmaster:latest
-      run: docker rmi -f kundankumar344/devdtaskmaster:latest
+      run: |
+          docker push kundankumar344/devdtaskmaster:latest
+          docker rmi -f kundankumar344/devdtaskmaster:latest
 
  
