@@ -43,6 +43,6 @@ jobs:
       uses: docker/setup-buildx-action@v3
 
     - name: Docker Image Build
-      uses: docker build -t kundankumar344/prodtaskmaster:latest .
+      run: docker build -t kundankumar344/prodtaskmaster:latest .
 
  
