@@ -56,5 +56,6 @@ jobs:
 
     - name: Docker Image Push 
       run: docker push kundankumar344/devdtaskmaster:latest
+      run: docker rmi -f kundankumar344/devdtaskmaster:latest
 
  
