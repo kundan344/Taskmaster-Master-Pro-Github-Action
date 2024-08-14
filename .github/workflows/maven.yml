@@ -45,4 +45,16 @@ jobs:
     - name: Docker Image Build
       run: docker build -t kundankumar344/prodtaskmaster:latest .
 
+    - name: Docker Image Scan
+      run: trivy image --format table -o trivy-image-scan.html kundankumar344/devtaskmaster:latest
+
+    - name: Login to Docker Hub
+      uses: docker/login-action@v3
+      with:
+        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+    - name: Docker Image Push 
+      run: docker push kundankumar344/devdtaskmaster:latest
+
  
