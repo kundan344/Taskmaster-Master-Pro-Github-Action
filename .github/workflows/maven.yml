@@ -43,7 +43,7 @@ jobs:
       uses: docker/setup-buildx-action@v3
 
     - name: Docker Image Build
-      run: docker build -t kundankumar344/prodtaskmaster:latest .
+      run: docker build -t kundankumar344/devdtaskmaster:latest .
 
     - name: Docker Image Scan
       run: trivy image --format table -o trivy-image-scan.html kundankumar344/devtaskmaster:latest
