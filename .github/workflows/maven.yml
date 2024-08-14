@@ -31,10 +31,10 @@ jobs:
     - name: Trivy FS Scan
       run: trivy fs --format table -o trivy-scan-fs.html .
 
-    - name: Sonaqube Code Analysis
+    - name: SonarQube Scan
       uses: sonarsource/sonarqube-scan-action@master
       env:
-        host: ${{ secrets.SONARQUBE_HOST }}
-        login: ${{ secrets.SONARQUBE_TOKEN }}
+        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
  
